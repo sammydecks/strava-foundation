@@ -16,6 +16,17 @@ def print_largest_indexes(data):
     # extra newline (match example format)
     print()
 
+def print_avg(data):
+    print("Printing average of all index sizes")
+    sum = 0
+    count = 0
+    for index in data:
+        sum += int(index['pri.store.size'])
+        count += 1
+    avg = sum / count
+    byte_conversion = round((int(avg) / (10 ** 9)),2)
+    print("Average index size:", byte_conversion, "GB")
+
 """
 Print the top five indexes by largest largest shard count
 Args:

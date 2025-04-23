@@ -94,6 +94,7 @@ def main():
 
     # only run data aggregation if data has been loaded
     if data is not None:
+        print_avg(data)
         print_largest_indexes(data)
         print_most_shards(data)
         print_least_balanced(data)
